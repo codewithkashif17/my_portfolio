@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const PROJECTS = [
     {
         index: "01",
-        title: "Nimbus Analytics",
+        title: "Data Dashboard",
         category: "Data Dashboard",
         description:
             "A real-time analytics dashboard with custom charting, role-based access, and sub-second data refresh across distributed sources.",
-        tags: ["React", "TypeScript", "WebSocket"],
+        tags: ["React", "TypeScript", "Tailwindcss", "ML AI"],
         image:
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
         liveUrl: "#",
@@ -41,7 +41,7 @@ const PROJECTS = [
     {
         index: "04",
         title: "My Portfolio",
-        category: "Content Platform",
+        category: "Portfolio",
         description:
             "Designed and developed a fully responsive personal portfolio using React for dynamic UI components, Tailwind CSS for modern styling, and Framer Motion for seamless animations and transitions. The portfolio highlights my projects, technical skills, and creativity with a focus on performance, accessibility, and user experience.",
         tags: ["React", "Tailwind CSS", "Framer Motion"],
@@ -178,11 +178,9 @@ export default function Project() {
                     className="mb-16 flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-between"
                 >
                     <div>
-                        <span className="mb-3 inline-block font-mono text-xs uppercase tracking-[0.2em] text-cyan-400">
-                            Selected Work
-                        </span>
+                    
                         <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-                            Featured{" "}
+                            My{" "}
                             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                                 Projects
                             </span>
