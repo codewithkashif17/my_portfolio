@@ -23,7 +23,7 @@ const PROJECTS = [
             "Headless storefront with optimistic cart updates, Stripe checkout, and edge-cached product pages for instant loads.",
         tags: ["Next.js", "Tailwindcss"],
         image: "/tic-tac-toe-game_Picture.png",
-        liveUrl: "#",
+        liveUrl: "https://tic-tac-toe-game-smsu.vercel.app/",
         codeUrl: "https://github.com/codewithkashif17/tic-tac-toe-game.git",
     },
     {
@@ -35,7 +35,7 @@ const PROJECTS = [
         tags: ["React",],
         image:
             "/todoApp_picture.png",
-        liveUrl: "#",
+        liveUrl: "https://todo-app-iota-gilt-16.vercel.app/",
         codeUrl: "https://github.com/codewithkashif17/todo-app.git",
     },
     {
@@ -47,7 +47,7 @@ const PROJECTS = [
         tags: ["React", "Tailwind CSS", "Framer Motion"],
         image:
             "/myPortfolio_pic.png",
-        liveUrl: "#",
+        liveUrl: "https://my-portfolio-gv7k.vercel.app/",
         codeUrl: "https://github.com/codewithkashif17/my_portfolio",
     },
 ];
