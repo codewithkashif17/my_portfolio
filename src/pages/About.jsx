@@ -50,7 +50,7 @@ export default function About() {
                     <div className="relative rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-3 backdrop-blur-xl">
                         <div className="relative overflow-hidden rounded-[1.4rem]">
                             <img
-                                src="../../../public/pictures/heroPic.png"
+                                src="/pictures/heroPic.png"
                                 alt="Alex Carter portrait"
                                 className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-105"
                             />

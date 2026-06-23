@@ -20,7 +20,7 @@ export default function Hero() {
 
                 <div className="rounded-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 p-[3px] shadow-[0_0_40px_rgba(34,211,238,0.45)]">
                     <img
-                        src="../../../pictures/myProfile.png"
+                        src="/pictures/myProfile.png"
                         className="h-32 w-32 rounded-full border-4 border-[#05050a] md:h-40 md:w-40"
                     />
                 </div>
