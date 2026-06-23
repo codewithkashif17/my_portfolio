@@ -164,7 +164,7 @@ Using React Router for smooth page navigation.
 ## Clone Repository
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/codewithkashif17/my_portfolio
 ```
 
 ## Navigate to Project
