@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+
 const PROJECTS = [
     {
         index: "01",
@@ -21,8 +22,7 @@ const PROJECTS = [
         description:
             "Headless storefront with optimistic cart updates, Stripe checkout, and edge-cached product pages for instant loads.",
         tags: ["Next.js", "Tailwindcss"],
-        image:
-            "./src/assets/projectsPic/tic-tac-toe-game_Picture.png",
+        image: "/tic-tac-toe-game_Picture.png",
         liveUrl: "#",
         codeUrl: "https://github.com/codewithkashif17/tic-tac-toe-game.git",
     },
@@ -34,7 +34,7 @@ const PROJECTS = [
             "A modern and clean Todo List application built with React.js.",
         tags: ["React",],
         image:
-            "./src/assets/projectsPic/todoApp_picture.png",
+            "/todoApp_picture.png",
         liveUrl: "#",
         codeUrl: "https://github.com/codewithkashif17/todo-app.git",
     },
@@ -46,7 +46,7 @@ const PROJECTS = [
             "Designed and developed a fully responsive personal portfolio using React for dynamic UI components, Tailwind CSS for modern styling, and Framer Motion for seamless animations and transitions. The portfolio highlights my projects, technical skills, and creativity with a focus on performance, accessibility, and user experience.",
         tags: ["React", "Tailwind CSS", "Framer Motion"],
         image:
-            "./src/assets/projectsPic/myPortfolio_pic.png",
+            "/myPortfolio_pic.png",
         liveUrl: "#",
         codeUrl: "https://github.com/codewithkashif17/my_portfolio",
     },

@@ -65,8 +65,8 @@ const CONTACTS = [
     },
     {
         name: "Instagram",
-        handle: "@alexcarter.dev",
-        href: "https://instagram.com/alexcarter.dev",
+        handle: "@codewithkashi",
+        href: "https://instagram.com/codewithkashi",
         color: "#f472b6",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
@@ -163,9 +163,7 @@ export default function Contact() {
                     transition={{ duration: 0.5 }}
                     className="mb-14 text-center"
                 >
-                    {/* <span className="mb-3 inline-block font-mono text-xs uppercase tracking-[0.2em] text-cyan-400">
-                        Get In Touch
-                    </span> */}
+                    
                     <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
                         Get In {" "}
                         <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
