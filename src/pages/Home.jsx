@@ -15,9 +15,9 @@ export default function Home() {
 
             <MouseGlow x={mouse.x} y={mouse.y} />
 
-            <FloatingShape className="top-[-10%] left-[-10%] h-[28rem] w-[28rem] bg-cyan-500/20" />
+            {/* <FloatingShape className="top-[-10%] left-[-10%] h-[28rem] w-[28rem] bg-cyan-500/20" />
             <FloatingShape className="top-[40%] right-[-15%] h-[32rem] w-[32rem] bg-purple-500/20" />
-            <FloatingShape className="bottom-[-15%] left-[20%] h-[24rem] w-[24rem] bg-blue-500/15" />
+            <FloatingShape className="bottom-[-15%] left-[20%] h-[24rem] w-[24rem] bg-blue-500/15" /> */}
             <Hero />
             <Stats />
 

@@ -42,11 +42,11 @@ export default function Navbar() {
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "py-0" : "py-0"
+        className={`fixed inset-x-0 top-0 z-10 transition-all duration-300 ${scrolled ? "py-0" : "py-0"
           }`}
       >
         <nav
-          className={` flex max-w-full items-center justify-between rounded-2xl border px-5 py-3 backdrop-blur-xl transition-all duration-300 sm:px-8 ${scrolled
+          className={` flex max-w-full items-center justify-between rounded-2xl border px-3 py-3 backdrop-blur-xl transition-all duration-300 sm:px-8 ${scrolled
               ? "border-white/10 bg-white/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
               : "border-white/5 bg-white/[0.02]"
             } mx-4 md:mx-auto`}
