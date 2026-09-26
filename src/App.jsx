@@ -1,27 +1,8 @@
-import { Routes, Route } from "react-router-dom"
-import Layout from "./layout/Layout"
-
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Projects from "./pages/Projects"
-import Contact from "./pages/Contact"
-import Skills from "./pages/Skills"
-import Expertise from "./pages/Expertise"
-
-
-function App() {
+import Maintenance from "./pages/Maintenance";
+export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/expertise" element={<Expertise />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Layout>
-  )
+    <main className="min-h-screen bg-background text-on-surface flex items-center justify-center px-margin-mobile md:px-margin-desktop">
+      <Maintenance/>
+    </main>
+  );
 }
-
-export default App
