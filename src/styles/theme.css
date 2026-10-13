@@ -1,0 +1,33 @@
+/* =========================================
+   PORTFOLIO THEME
+   Central source for all theme colors
+========================================= */
+
+:root {
+  /* Brand colors */
+  --color-gold: #d4af37;
+  --color-gold-light: #eac249;
+  --color-gold-dark: #c5a028;
+
+  /* Dark theme surfaces */
+  --color-background: #131313;
+  --color-surface: #1a1a1a;
+
+  /* Text colors */
+  --color-text: #e5e2e1;
+  --color-text-muted: #d0c5af;
+
+  /* Borders and effects */
+  --color-border: #4d4635;
+  --color-selection-text: #ffffff;
+}
+
+/* Dark theme */
+html.dark {
+  color-scheme: dark;
+}
+
+/* Light theme — we'll refine these values later */
+html:not(.dark) {
+  color-scheme: light;
+}
