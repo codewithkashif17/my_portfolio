@@ -24,7 +24,7 @@ export default function Navbar() {
   const [isCommandOpen, setIsCommandOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("");
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const [theme, setTheme] = useState(() => {
@@ -38,11 +38,7 @@ export default function Navbar() {
     );
   });
 
-  /*
-   * -----------------------------------------
-   * Scroll state
-   * -----------------------------------------
-   */
+  /*  Scroll state */
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,11 +81,7 @@ export default function Navbar() {
     };
   }, []);
 
-  /*
-   * -----------------------------------------
-   * Active section detection
-   * -----------------------------------------
-   */
+  /* Active section detection*/
 
   useEffect(() => {
     const sections = NAV_LINKS.map((link) => {
@@ -134,11 +126,7 @@ export default function Navbar() {
     };
   }, []);
 
-  /*
-   * -----------------------------------------
-   * Theme
-   * -----------------------------------------
-   */
+  /*Theme*/
 
   useEffect(() => {
     const root = document.documentElement;
@@ -155,11 +143,7 @@ export default function Navbar() {
     );
   }, [theme]);
 
-  /*
-   * -----------------------------------------
-   * Keyboard shortcuts
-   * -----------------------------------------
-   */
+  /*Keyboard shortcuts*/
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -198,11 +182,7 @@ export default function Navbar() {
     };
   }, []);
 
-  /*
-   * -----------------------------------------
-   * Mobile body lock
-   * -----------------------------------------
-   */
+  /*Mobile body lock*/
 
   useEffect(() => {
     const shouldLock =
@@ -217,11 +197,7 @@ export default function Navbar() {
     };
   }, [isOpen, isCommandOpen]);
 
-  /*
-   * -----------------------------------------
-   * Navigation
-   * -----------------------------------------
-   */
+  /*Navigation*/
 
   const navigateTo = (href) => {
     setIsOpen(false);
@@ -266,11 +242,7 @@ export default function Navbar() {
     );
   };
 
-  /*
-   * -----------------------------------------
-   * Command actions
-   * -----------------------------------------
-   */
+  /* Command actions*/
 
   const commandItems = useMemo(
     () => [
@@ -335,9 +307,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* =========================================
-          Fixed Navigation Shell
-      ========================================== */}
+      {/*  Fixed Navigation Shell */}
 
       <header
         className="
@@ -348,9 +318,7 @@ export default function Navbar() {
           pointer-events-none
         "
       >
-        {/* =======================================
-            Announcement
-        ======================================== */}
+        {/* Announcement */}
 
         <AnimatePresence>
           {showAnnouncement && (
@@ -378,9 +346,7 @@ export default function Navbar() {
           )}
         </AnimatePresence>
 
-        {/* =======================================
-            Scroll Progress
-        ======================================== */}
+        {/* Scroll Progress */}
 
         <div
           className="
@@ -412,9 +378,7 @@ export default function Navbar() {
           />
         </div>
 
-        {/* =======================================
-            Main Navbar
-        ======================================== */}
+        {/* Main Navbar */}
 
         <motion.nav
           initial={{
@@ -471,9 +435,7 @@ export default function Navbar() {
               }
             `}
           >
-            {/* =================================
-                Logo
-            ================================== */}
+            {/* Logo */}
 
             <button
               type="button"
@@ -509,9 +471,7 @@ export default function Navbar() {
               />
             </button>
 
-            {/* =================================
-                Desktop Navigation
-            ================================== */}
+            {/* Desktop Navigation */}
 
             <div className="hidden items-center md:flex">
               <ul className="flex items-center gap-7">
@@ -602,9 +562,7 @@ export default function Navbar() {
               </ul>
             </div>
 
-            {/* =================================
-                Desktop Actions
-            ================================== */}
+            {/* Desktop Actions */}
 
             <div className="hidden items-center gap-2 md:flex">
               {/* Live Status */}
@@ -791,9 +749,7 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* =================================
-                Mobile Controls
-            ================================== */}
+            {/* Mobile Controls */}
 
             <div className="flex items-center gap-2 md:hidden">
               {/* Theme */}
@@ -843,7 +799,7 @@ export default function Navbar() {
                 aria-expanded={isOpen}
                 className="
                   relative
-                  z-[100]
+                  z-[10]
                   flex
                   h-10
                   w-10
@@ -913,9 +869,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* =====================================
-              Mobile Drawer
-          ====================================== */}
+          {/* Mobile Drawer */}
 
           <AnimatePresence>
             {isOpen && (
@@ -1318,9 +1272,7 @@ export default function Navbar() {
         </motion.nav>
       </header>
 
-      {/* =========================================
-          Command Palette
-      ========================================== */}
+      {/* Command Palette*/}
 
       <AnimatePresence>
         {isCommandOpen && (
