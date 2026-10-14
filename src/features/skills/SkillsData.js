@@ -2,7 +2,6 @@ import {
   FaReact,
   FaNodeJs,
   FaPython,
-  FaJava,
   FaGitAlt,
   FaGithub,
   FaDatabase,
@@ -15,7 +14,6 @@ import {
 
 import {
   SiJavascript,
-  SiTypescript,
   SiExpress,
   SiMongodb,
   SiMysql,
@@ -25,7 +23,6 @@ import {
   SiNextdotjs,
   SiVite,
   SiPostman,
-  SiFigma,
   SiHtml5,
   SiCss,
 } from "react-icons/si";
@@ -63,7 +60,7 @@ export const SKILLS_DATA = {
     {
       name: "React.js",
       icon: FaReact,
-      level: 90,
+      level: 70,
       experience: "Advanced",
       description:
         "Component-based UI development, hooks, reusable architecture and modern React patterns.",
@@ -98,7 +95,7 @@ export const SKILLS_DATA = {
     {
       name: "Tailwind CSS",
       icon: SiTailwindcss,
-      level: 92,
+      level: 80,
       experience: "Advanced",
       description:
         "Utility-first responsive UI development and design systems.",
@@ -107,7 +104,7 @@ export const SKILLS_DATA = {
     {
       name: "Next.js",
       icon: SiNextdotjs,
-      level: 72,
+      level: 40,
       experience: "Intermediate",
       description:
         "Modern React framework concepts, routing and application architecture.",
@@ -119,7 +116,7 @@ export const SKILLS_DATA = {
     {
       name: "Node.js",
       icon: FaNodeJs,
-      level: 86,
+      level: 70,
       experience: "Advanced",
       description:
         "Server-side JavaScript, asynchronous architecture and backend services.",
@@ -152,15 +149,7 @@ export const SKILLS_DATA = {
         "Programming fundamentals, scripting and backend-oriented development.",
       featured: false,
     },
-    {
-      name: "Java",
-      icon: FaJava,
-      level: 65,
-      experience: "Intermediate",
-      description:
-        "Object-oriented programming and application development fundamentals.",
-      featured: false,
-    },
+  
   ],
 
   mobile: [
@@ -227,7 +216,7 @@ export const SKILLS_DATA = {
     {
       name: "Git",
       icon: FaGitAlt,
-      level: 88,
+      level: 78,
       experience: "Advanced",
       description:
         "Version control, branching, commits, merging and collaborative workflows.",
@@ -258,14 +247,7 @@ export const SKILLS_DATA = {
       description: "API testing, request collections and backend debugging.",
       featured: false,
     },
-    {
-      name: "Figma",
-      icon: SiFigma,
-      level: 65,
-      experience: "Intermediate",
-      description: "Interface design, visual planning and UI prototyping.",
-      featured: false,
-    },
+  
   ],
 };
 

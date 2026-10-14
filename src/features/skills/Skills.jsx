@@ -30,9 +30,7 @@ export default function Skills() {
         lg:py-32
       "
     >
-      {/* =====================================================
-          BACKGROUND EFFECTS
-      ====================================================== */}
+      {/*   BACKGROUND EFFECTS */}
 
       <div className="pointer-events-none absolute inset-0">
         {/* Top Glow */}
@@ -92,9 +90,7 @@ export default function Skills() {
       </div>
 
       <Container>
-        {/* =====================================================
-            SECTION HEADER
-        ====================================================== */}
+        {/* SECTION HEADER */}
 
         <SectionTitle
           badge="Technical Expertise"
@@ -105,9 +101,7 @@ export default function Skills() {
           "
         />
 
-        {/* =====================================================
-            SKILL STATISTICS
-        ====================================================== */}
+        {/*  SKILL STATISTICS */}
 
         <div
           className="
@@ -205,9 +199,7 @@ export default function Skills() {
           })}
         </div>
 
-        {/* =====================================================
-            MAIN SKILLS PANEL
-        ====================================================== */}
+        {/* MAIN SKILLS PANEL */}
 
         <div
           className="
@@ -244,9 +236,7 @@ export default function Skills() {
               lg:grid-cols-[260px_1fr]
             "
           >
-            {/* =================================================
-                CATEGORY SIDEBAR
-            ================================================== */}
+            {/* CATEGORY SIDEBAR*/}
 
             <aside
               className="
@@ -360,9 +350,7 @@ export default function Skills() {
               </div>
             </aside>
 
-            {/* =================================================
-                SKILLS CONTENT
-            ================================================== */}
+            {/* SKILLS CONTENT */}
 
             <div className="p-6 md:p-8 lg:p-10">
               {/* Header */}
@@ -428,9 +416,7 @@ export default function Skills() {
                 </div>
               </div>
 
-              {/* =================================================
-                  SKILL CARDS
-              ================================================== */}
+              {/* SKILL CARDS*/}
 
               <div
                 className="
@@ -673,9 +659,7 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* =====================================================
-            BOTTOM TECH STRIP
-        ====================================================== */}
+        {/* BOTTOM TECH STRIP*/}
 
         <div
           className="
