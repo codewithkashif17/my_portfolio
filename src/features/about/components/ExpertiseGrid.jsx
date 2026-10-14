@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
+
 const cardVariants = {
   hidden: {
     opacity: 0,

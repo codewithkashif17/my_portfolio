@@ -663,12 +663,10 @@
 
 
 import "./Hero.css";
-
 import Container from "../../components/layout/Container";
-
 import HeroIntro from "./components/HeroIntro";
 import HeroActions from "./components/HeroActions";
-import HeroSocialLinks from "./components/HeroSocialLinks";
+// import HeroSocialLinks from "./components/HeroSocialLinks";
 import DeveloperDashboard from "./components/DeveloperDashboard";
 
 import useGitHubDashboard from "../../hooks/useGitHubDashboard";

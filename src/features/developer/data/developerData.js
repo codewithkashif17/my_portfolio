@@ -7,17 +7,17 @@ export const DEVELOPER_STATUS = {
 };
 
 export const TODAY_OVERVIEW = {
-  codingHours: 4.5,
-  studyHours: 2.5,
-  githubCommits: 8,
-  leetcodeSolved: 3,
+  codingHours: 5.5,
+  studyHours: 5.5,
+  githubCommits: 10,
+  leetcodeSolved: 1,
 };
 
 export const WEEKLY_OVERVIEW = {
-  codingHours: 27.4,
-  studyHours: 14.2,
-  githubCommits: 42,
-  leetcodeSolved: 18,
+  codingHours: 38.5,
+  studyHours: 38.5,
+  githubCommits: 70,
+  leetcodeSolved: 7,
 };
 
 export const CURRENT_PROJECT = {
@@ -42,14 +42,14 @@ export const GITHUB_STATS = {
   username: "codewithkashif17",
 
   today: {
-    commits: 8,
+    commits: 10,
     pullRequests: 1,
     issues: 0,
   },
 
   thisWeek: {
-    commits: 42,
-    pullRequests: 3,
+    commits: 70,
+    pullRequests: 7,
     repositories: 4,
   },
 
@@ -60,7 +60,7 @@ export const GITHUB_STATS = {
   },
 
   total: {
-    repositories: 18,
+    repositories: 12,
     contributions: 642,
   },
 
@@ -68,34 +68,34 @@ export const GITHUB_STATS = {
 };
 
 export const LEETCODE_STATS = {
-  username: "kashifmehmood",
+  username: "codeWithKashi_17",
 
-  totalSolved: 127,
+  totalSolved: 7,
 
   difficulty: {
-    easy: 61,
-    medium: 54,
-    hard: 12,
+    easy: 2,
+    medium: 4,
+    hard: 1,
   },
 
   today: {
-    solved: 3,
-    easy: 1,
-    medium: 2,
+    solved: 1,
+    easy: 0,
+    medium: 1,
     hard: 0,
   },
 
   streak: 7,
 
   thisWeek: {
-    solved: 18,
+    solved: 7,
   },
 
   thisMonth: {
-    solved: 47,
+    solved: 30,
   },
 
-  acceptanceRate: 68.4,
+  acceptanceRate: 80.0,
 };
 
 export const LEARNING_STATS = {

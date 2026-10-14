@@ -30,7 +30,7 @@ export const SOCIAL_LINKS = {
   email: "mailto:kashifmehmoodtech17@gmail.com",
 };
 
-export const RESUME_LINK = "/resume/Kashif-Mehmood-Resume.pdf";
+export const RESUME_LINK = "#";
 
 export const PROJECT_LINKS = {
   portfolio: "https://my-portfolio-gv7k.vercel.app/",

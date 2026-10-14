@@ -1,10 +1,7 @@
 import {
-  FaGithub,
   FaExternalLinkAlt,
   FaReact,
   FaNodeJs,
-  FaDatabase,
-  FaMobileAlt,
   FaCode,
 } from "react-icons/fa";
 
@@ -70,7 +67,7 @@ export const PROJECTS_DATA = [
     },
 
     links: {
-      github: "https://github.com/kashifmehmoodtech17-cyber",
+      github: "#",
       live: "#",
     },
   },
@@ -121,7 +118,7 @@ export const PROJECTS_DATA = [
     },
 
     links: {
-      github: "https://github.com/kashifmehmoodtech17-cyber",
+      github: "#",
       live: "#",
     },
   },
@@ -172,7 +169,7 @@ export const PROJECTS_DATA = [
     },
 
     links: {
-      github: "https://github.com/kashifmehmoodtech17-cyber",
+      github: "#",
       live: "#",
     },
   },
@@ -219,7 +216,7 @@ export const PROJECTS_DATA = [
     },
 
     links: {
-      github: "https://github.com/kashifmehmoodtech17-cyber",
+      github: "#",
       live: "#",
     },
   },

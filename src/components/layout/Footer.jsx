@@ -1,5 +1,4 @@
 import {
-  FaArrowUp,
   FaGithub,
   FaLinkedin,
   FaEnvelope,
@@ -18,9 +17,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute -top-40 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-primary/5 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-14 lg:px-8">
-        {/* =========================================
-            MAIN FOOTER
-        ========================================== */}
+        {/* MAIN FOOTER */}
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -129,69 +126,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* =========================================
-            CTA
-        ========================================== */}
 
-        <div
-          className="
-            mt-12
-            flex
-            flex-col
-            gap-5
-            rounded-2xl
-            border
-            border-primary/15
-            bg-primary/[0.03]
-            p-6
-            md:flex-row
-            md:items-center
-            md:justify-between
-          "
-        >
-          <div>
-            <p className="font-semibold text-on-surface">
-              Have an idea worth building?
-            </p>
+        
 
-            <p className="mt-1 text-sm text-on-surface-variant">
-              Let's turn your requirements into a real software solution.
-            </p>
-          </div>
-
-          <a
-            href="#contact"
-            className="
-              inline-flex
-              items-center
-              justify-center
-              rounded-full
-              bg-primary
-              px-6
-              py-3
-              text-sm
-              font-semibold
-              text-on-primary
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:shadow-lg
-              hover:shadow-primary/20
-            "
-          >
-            Start a Conversation
-          </a>
-        </div>
-
-        {/* =========================================
-            DIVIDER
-        ========================================== */}
+        {/* DIVIDER */}
 
         <div className="my-8 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-        {/* =========================================
-            BOTTOM BAR
-        ========================================== */}
+        {/* BOTTOM BAR */}
 
         <div
           className="
@@ -223,47 +165,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* =========================================
-          BACK TO TOP
-      ========================================== */}
-
-      <a
-        href="#home"
-        aria-label="Back to top"
-        className="
-          absolute
-          bottom-6
-          right-6
-          flex
-          h-11
-          w-11
-          items-center
-          justify-center
-          rounded-full
-          border
-          border-primary/25
-          bg-background/80
-          text-primary
-          backdrop-blur-md
-          transition-all
-          duration-300
-          hover:-translate-y-1
-          hover:border-primary
-          hover:bg-primary
-          hover:text-on-primary
-          hover:shadow-lg
-          hover:shadow-primary/20
-        "
-      >
-        <FaArrowUp />
-      </a>
     </footer>
   );
 }
 
-/* =========================================
-   SOCIAL ICON
-========================================= */
+/* SOCIAL ICON */
 
 function SocialIcon({ href, label, children }) {
   return (

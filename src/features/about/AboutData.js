@@ -1,3 +1,10 @@
+import {
+  FaReact,
+  FaDatabase,
+  FaServer,
+  FaMobileAlt,
+} from "react-icons/fa";
+
 import profileImage from "../../assets/hero_pic.png";
 
 export const ABOUT_DATA = {
@@ -18,40 +25,40 @@ export const ABOUT_DATA = {
   mission:
     "My mission is to continuously improve my technical skills, contribute to impactful projects, and build software that combines performance, scalability, maintainability, and exceptional user experience.",
 
-  expertise: [
+   expertise: [
     {
       title: "Frontend Development",
-      icon: "💻",
+      icon: FaReact ,
       technologies: ["React.js", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"],
     },
 
     {
       title: "Backend Development",
-      icon: "⚙️",
+      icon: FaServer,
       technologies: ["Node.js", "Express.js", "REST APIs", "Authentication"],
     },
 
     {
       title: "Mobile Development",
-      icon: "📱",
+      icon: FaMobileAlt,
       technologies: ["Flutter", "Dart", "Responsive UI", "Cross Platform Apps"],
     },
 
     {
       title: "Database Systems",
-      icon: "🗄️",
+      icon:  FaDatabase,
       technologies: ["MongoDB", "MySQL", "Database Design", "Optimization"],
     },
   ],
 
   stats: [
     {
-      number: "10+",
+      number: "4+",
       label: "Projects Built",
     },
 
     {
-      number: "5+",
+      number: "15+",
       label: "Core Technologies",
     },
 
@@ -68,14 +75,14 @@ export const ABOUT_DATA = {
 
   timeline: [
     {
-      year: "2025",
+      year: "2024",
       title: "Started BS Software Engineering",
       description:
         "Began Software Engineering degree at KUST and explored programming fundamentals.",
     },
 
     {
-      year: "2025",
+      year: "2024",
       title: "Started Web Development",
       description:
         "Learned HTML, CSS, JavaScript and started building frontend projects.",
@@ -114,3 +121,5 @@ export const ABOUT_DATA = {
     "Collaborations",
   ],
 };
+
+

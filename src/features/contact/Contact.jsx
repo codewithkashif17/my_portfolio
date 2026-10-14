@@ -5,10 +5,7 @@ import {
   FaCheck,
   FaClipboardCheck,
   FaEnvelope,
-  FaGithub,
-  FaLinkedin,
   FaPaperPlane,
-  FaPhone,
   FaRegCopy,
   FaShieldAlt,
 } from "react-icons/fa";
@@ -75,9 +72,7 @@ export default function Contact() {
         lg:py-32
       "
     >
-      {/* =====================================================
-          BACKGROUND
-      ====================================================== */}
+      {/* BACKGROUND */}
 
       <div className="pointer-events-none absolute inset-0">
         <div
@@ -122,9 +117,7 @@ export default function Contact() {
       </div>
 
       <Container>
-        {/* =================================================
-            HEADER
-        ================================================== */}
+        {/* HEADER */}
 
         <div className="max-w-3xl mb-16">
           <div
@@ -186,9 +179,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* =================================================
-            MAIN CONTACT INTERFACE
-        ================================================== */}
+        {/* MAIN CONTACT INTERFACE*/}
 
         <div
           className="
@@ -203,9 +194,7 @@ export default function Contact() {
           "
         >
           <div className="grid lg:grid-cols-[0.8fr_1.5fr]">
-            {/* =================================================
-                LEFT INFORMATION PANEL
-            ================================================== */}
+            {/* LEFT INFORMATION PANEL */}
 
             <aside
               className="
@@ -527,9 +516,7 @@ export default function Contact() {
               </div>
             </aside>
 
-            {/* =================================================
-                PROJECT INQUIRY FORM
-            ================================================== */}
+            {/* PROJECT INQUIRY FORM */}
 
             <div className="p-7 md:p-10 lg:p-12">
               {!submitted ? (
@@ -577,9 +564,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* =================================================
-                      BASIC INFORMATION
-                  ================================================== */}
+                  {/* BASIC INFORMATION */}
 
                   <div className="grid gap-5 md:grid-cols-2">
                     <FormField
@@ -620,9 +605,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* =================================================
-                      PROJECT DETAILS
-                  ================================================== */}
+                  {/* PROJECT DETAILS */}
 
                   <div>
                     <div className="mb-4">
@@ -680,9 +663,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* =================================================
-                      MESSAGE
-                  ================================================== */}
+                  {/* MESSAGE */}
 
                   <div>
                     <label
@@ -734,9 +715,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* =================================================
-                      CONTACT PREFERENCE
-                  ================================================== */}
+                  {/* CONTACT PREFERENCE */}
 
                   <div>
                     <p
@@ -797,9 +776,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* =================================================
-                      SUBMIT
-                  ================================================== */}
+                  {/* SUBMIT */}
 
                   <div
                     className="
@@ -869,9 +846,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* =================================================
-            BOTTOM CTA
-        ================================================== */}
+        {/* BOTTOM CTA */}
 
         <div
           className="
@@ -943,9 +918,7 @@ export default function Contact() {
   );
 }
 
-/* =========================================================
-   FORM FIELD
-========================================================= */
+/* FORM FIELD */
 
 function FormField({
   label,
@@ -1005,9 +978,7 @@ function FormField({
   );
 }
 
-/* =========================================================
-   SELECT FIELD
-========================================================= */
+/* SELECT FIELD */
 
 function SelectField({
   label,
@@ -1079,9 +1050,7 @@ function SelectField({
   );
 }
 
-/* =========================================================
-   SUCCESS STATE
-========================================================= */
+/* SUCCESS STATE */
 
 function SuccessState({ email }) {
   return (
