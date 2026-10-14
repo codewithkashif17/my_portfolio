@@ -16,9 +16,9 @@ export const PERSONAL_INFO = {
 
   location: "Kohat, Khyber Pakhtunkhwa, Pakistan",
 
-  email: "your-email@gmail.com",
+  email: "kashifmehmoodtech17@gmail.com",
 
-  phone: "+92xxxxxxxxxx",
+  phone: "+923443248489",
 
   profileImage,
 
