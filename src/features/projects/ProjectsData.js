@@ -220,4 +220,51 @@ export const PROJECTS_DATA = [
       live: "#",
     },
   },
+
+   {
+    id: 5,
+    title: "3D Design Porfolio",
+    shortTitle: "Web Application",
+    category: "Web",
+    featured: false,
+
+    description:
+      "A modern Flutter mobile application focused on clean UI, responsive layouts, reusable widgets, application state, and API integration.",
+
+    vedio: "/portPolio3D_Vedio.mp4",
+
+    technologies: [
+      {
+        name: "Flutter",
+        icon: SiFlutter,
+      },
+      {
+        name: "Dart",
+        icon: FaCode,
+      },
+      {
+        name: "API",
+        icon: FaExternalLinkAlt,
+      },
+    ],
+
+    features: [
+      "Responsive UI",
+      "Reusable widgets",
+      "API integration",
+      "Navigation",
+      "State management",
+      "Modern UX",
+    ],
+
+    stats: {
+      type: "Mobile",
+      status: "Development",
+    },
+
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
 ];

@@ -274,9 +274,10 @@ export default function Projects() {
                 >
                   {/* Image */}
 
-                  <img
-                    src={project.image}
+                  <video
+                    src={project.vedio}
                     alt={project.title}
+                    autoPlay
                     className={`
                       w-full
                       h-full
@@ -287,6 +288,11 @@ export default function Projects() {
                       ${isHovered ? "scale-110" : "scale-100"}
                     `}
                   />
+
+                  
+
+                  
+
 
                   {/* Dark overlay */}
 
@@ -681,3 +687,6 @@ export default function Projects() {
     </section>
   );
 }
+
+
+
