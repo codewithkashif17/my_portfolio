@@ -1,4 +1,6 @@
+
 import { useMemo, useState } from "react";
+
 import {
   FaGithub,
   FaExternalLinkAlt,
@@ -29,91 +31,54 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="
-        relative
-        py-24
-        lg:py-32
-        overflow-hidden
-      "
+      className="relative overflow-hidden py-24 lg:py-32"
     >
-      {/* =========================================
-          BACKGROUND DECORATIONS
-      ========================================== */}
+      {/* BACKGROUND DECORATIONS */}
 
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="pointer-events-none absolute inset-0">
         <div
           className="
-            absolute
-            top-20
-            left-[-120px]
-            w-72
-            h-72
-            rounded-full
-            bg-primary/10
-            blur-[120px]
+            absolute left-[-120px] top-20
+            h-72 w-72 rounded-full
+            bg-primary/10 blur-[120px]
           "
         />
 
         <div
           className="
-            absolute
-            bottom-20
-            right-[-120px]
-            w-80
-            h-80
-            rounded-full
-            bg-primary-container/10
-            blur-[130px]
+            absolute bottom-20 right-[-120px]
+            h-80 w-80 rounded-full
+            bg-primary-container/10 blur-[130px]
           "
         />
 
         <div
           className="
-            absolute
-            inset-x-0
-            top-1/2
-            h-px
-            bg-gradient-to-r
-            from-transparent
-            via-primary/10
-            to-transparent
+            absolute inset-x-0 top-1/2 h-px
+            bg-gradient-to-r from-transparent
+            via-primary/10 to-transparent
           "
         />
       </div>
 
       <Container>
-        {/* =========================================
-            SECTION HEADER
-        ========================================== */}
+        {/* SECTION HEADER */}
 
         <SectionTitle
           badge="My Work"
           title="Projects That Turn Ideas Into Reality"
-          subtitle="
-            A collection of applications and systems built
-            with modern technologies, scalable architecture,
-            and a strong focus on user experience.
-          "
+          subtitle="A collection of applications and systems built with modern technologies, scalable architecture, and a strong focus on user experience."
         />
 
-        {/* =========================================
-            CATEGORY FILTER
-        ========================================== */}
+        {/* CATEGORY FILTER */}
 
-        <div className="flex justify-center mb-14">
+        <div className="mb-14 flex justify-center">
           <div
             className="
-              inline-flex
-              flex-wrap
-              justify-center
-              gap-2
-              p-2
-              rounded-2xl
-              border
-              border-primary/20
-              bg-surface-container/70
-              backdrop-blur-xl
-              shadow-xl
+              inline-flex flex-wrap justify-center gap-2
+              rounded-2xl border border-primary/20
+              bg-surface-container/70 p-2
+              shadow-xl backdrop-blur-xl
             "
           >
             {PROJECT_CATEGORIES.map((category) => {
@@ -124,30 +89,15 @@ export default function Projects() {
                   key={category}
                   type="button"
                   onClick={() => setActiveCategory(category)}
+                  aria-pressed={active}
                   className={`
-                    relative
-                    px-5
-                    py-2.5
-                    rounded-xl
-                    text-sm
-                    font-medium
-                    transition-all
-                    duration-300
-                    ease-out
+                    relative rounded-xl px-5 py-2.5
+                    text-sm font-medium
+                    transition-all duration-300 ease-out
                     ${
                       active
-                        ? `
-                          bg-primary
-                          text-on-primary
-                          shadow-lg
-                          shadow-primary/20
-                          scale-[1.03]
-                        `
-                        : `
-                          text-on-surface-variant
-                          hover:text-primary
-                          hover:bg-primary/10
-                        `
+                        ? "scale-[1.03] bg-primary text-on-primary shadow-lg shadow-primary/20"
+                        : "text-on-surface-variant hover:bg-primary/10 hover:text-primary"
                     }
                   `}
                 >
@@ -158,13 +108,15 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* =========================================
-            PROJECT GRID
-        ========================================== */}
+        {/* PROJECT GRID */}
 
         <div className="grid gap-8 lg:grid-cols-2">
           {filteredProjects.map((project, index) => {
             const isHovered = hoveredProject === project.id;
+
+            // Supports both correct and legacy property names.
+            const videoSrc = project.video || project.vedio;
+            const imageSrc = project.image;
 
             return (
               <article
@@ -172,88 +124,50 @@ export default function Projects() {
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
                 className={`
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[28px]
-                  border
-                  border-primary/20
-                  bg-surface-container
-                  shadow-xl
-                  transition-all
-                  duration-500
-                  ease-out
-
+                  group relative overflow-hidden
+                  rounded-[28px] border border-primary/20
+                  bg-surface-container shadow-xl
+                  transition-all duration-500 ease-out
                   ${
                     isHovered
-                      ? `
-                        border-primary/50
-                        -translate-y-3
-                        shadow-2xl
-                        shadow-primary/10
-                      `
+                      ? "-translate-y-3 border-primary/50 shadow-2xl shadow-primary/10"
                       : ""
                   }
-
                   ${project.featured ? "lg:col-span-2" : ""}
                 `}
                 style={{
                   animationDelay: `${index * 100}ms`,
                 }}
               >
-                {/* =================================
-                    CARD GLOW
-                ================================== */}
+                {/* CARD GLOW */}
 
                 <div
                   className={`
-                    absolute
-                    inset-0
-                    pointer-events-none
-                    transition-opacity
-                    duration-500
+                    pointer-events-none absolute inset-0
+                    transition-opacity duration-500
                     ${isHovered ? "opacity-100" : "opacity-0"}
                   `}
                 >
                   <div
                     className="
-                      absolute
-                      -top-32
-                      -right-32
-                      w-72
-                      h-72
-                      rounded-full
-                      bg-primary/15
-                      blur-[100px]
+                      absolute -right-32 -top-32
+                      h-72 w-72 rounded-full
+                      bg-primary/15 blur-[100px]
                     "
                   />
                 </div>
 
-                {/* =================================
-                    FEATURED BADGE
-                ================================== */}
+                {/* FEATURED BADGE */}
 
                 {project.featured && (
                   <div
                     className="
-                      absolute
-                      top-5
-                      left-5
-                      z-20
-                      inline-flex
-                      items-center
-                      gap-2
-                      px-3
-                      py-1.5
-                      rounded-full
-                      border
-                      border-primary/40
-                      bg-background/80
-                      backdrop-blur-md
-                      text-primary
-                      text-xs
-                      font-semibold
-                      tracking-wide
+                      absolute left-5 top-5 z-20
+                      inline-flex items-center gap-2
+                      rounded-full border border-primary/40
+                      bg-background/80 px-3 py-1.5
+                      text-xs font-semibold tracking-wide
+                      text-primary backdrop-blur-md
                     "
                   >
                     <FaStar className="text-[10px]" />
@@ -261,152 +175,150 @@ export default function Projects() {
                   </div>
                 )}
 
-                {/* =================================
-                    PROJECT IMAGE
-                ================================== */}
+                {/* PROJECT MEDIA: VIDEO OR IMAGE */}
 
                 <div
                   className={`
-                    relative
-                    overflow-hidden
-                    ${project.featured ? "h-[280px] md:h-[400px]" : "h-[260px]"}
+                    relative overflow-hidden bg-background
+                    ${
+                      project.featured
+                        ? "h-[280px] md:h-[400px]"
+                        : "h-[260px]"
+                    }
                   `}
                 >
-                  {/* Image */}
+                  {videoSrc ? (
+                    <video
+                      key={videoSrc}
+                      src={videoSrc}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      aria-label={`${project.title} preview`}
+                      className={`
+                        h-full w-full object-cover
+                        transition-transform duration-700 ease-out
+                        ${
+                          isHovered
+                            ? "scale-110"
+                            : "scale-100"
+                        }
+                      `}
+                      onError={(event) => {
+                        console.error(
+                          `Video load nahi hui: ${project.title}`,
+                          event.currentTarget.currentSrc,
+                        );
+                      }}
+                    />
+                  ) : imageSrc ? (
+                    <img
+                      src={imageSrc}
+                      alt={`${project.title} preview`}
+                      loading="lazy"
+                      className={`
+                        h-full w-full object-cover
+                        transition-transform duration-700 ease-out
+                        ${
+                          isHovered
+                            ? "scale-110"
+                            : "scale-100"
+                        }
+                      `}
+                      onError={(event) => {
+                        console.error(
+                          `Image load nahi hui: ${project.title}`,
+                          event.currentTarget.src,
+                        );
+                      }}
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center text-sm text-on-surface-variant">
+                      Project preview unavailable
+                    </div>
+                  )}
 
-                  <video
-                    src={project.vedio}
-                    alt={project.title}
-                    autoPlay
-                    className={`
-                      w-full
-                      h-full
-                      object-cover
-                      transition-transform
-                      duration-700
-                      ease-out
-                      ${isHovered ? "scale-110" : "scale-100"}
-                    `}
-                  />
-
-                  
-
-                  
-
-
-                  {/* Dark overlay */}
+                  {/* DARK OVERLAY */}
 
                   <div
                     className="
-                      absolute
-                      inset-0
-                      bg-gradient-to-t
-                      from-background
-                      via-background/20
-                      to-transparent
+                      pointer-events-none absolute inset-0
+                      bg-gradient-to-t from-background
+                      via-background/20 to-transparent
                     "
                   />
 
-                  {/* Image hover shine */}
+                  {/* HOVER SHINE */}
 
                   <div
                     className={`
-                      absolute
-                      inset-y-0
-                      -left-full
-                      w-1/2
-                      bg-gradient-to-r
-                      from-transparent
-                      via-white/10
-                      to-transparent
-                      skew-x-[-20deg]
-                      transition-all
-                      duration-1000
+                      pointer-events-none absolute inset-y-0
+                      -left-full w-1/2 skew-x-[-20deg]
+                      bg-gradient-to-r from-transparent
+                      via-white/10 to-transparent
+                      transition-all duration-1000
                       ${isHovered ? "left-[140%]" : ""}
                     `}
                   />
 
-                  {/* Project category */}
+                  {/* PROJECT CATEGORY */}
 
                   <div
                     className="
-                      absolute
-                      bottom-5
-                      left-5
-                      flex
-                      items-center
-                      gap-2
-                      px-3
-                      py-1.5
-                      rounded-full
-                      bg-black/40
-                      border
-                      border-white/10
-                      backdrop-blur-md
-                      text-white
-                      text-xs
+                      absolute bottom-5 left-5
+                      flex items-center gap-2
+                      rounded-full border border-white/10
+                      bg-black/40 px-3 py-1.5
+                      text-xs text-white backdrop-blur-md
                     "
                   >
                     <FaLayerGroup />
-
                     {project.category}
                   </div>
                 </div>
 
-                {/* =================================
-                    CARD CONTENT
-                ================================== */}
+                {/* CARD CONTENT */}
 
                 <div className="relative p-6 md:p-8">
-                  {/* Title */}
+                  {/* TITLE */}
 
                   <div className="flex items-start justify-between gap-4">
-                    <div>
+                    <div className="min-w-0">
                       <h3
                         className="
-                          font-serif
-                          text-2xl
+                          font-serif text-2xl font-bold
+                          text-on-surface transition-colors
+                          duration-300 group-hover:text-primary
                           md:text-3xl
-                          font-bold
-                          text-on-surface
-                          transition-colors
-                          duration-300
-                          group-hover:text-primary
                         "
                       >
                         {project.title}
                       </h3>
 
+                      {project.shortTitle && (
+                        <p className="mt-1 text-sm text-on-surface-variant">
+                          {project.shortTitle}
+                        </p>
+                      )}
+
                       <p className="mt-2 text-xs uppercase tracking-[0.2em] text-primary/70">
-                        {project.stats.type}
+                        {project.stats?.type || project.category}
                       </p>
                     </div>
 
-                    {/* Arrow */}
+                    {/* ARROW */}
 
                     <div
                       className={`
-                        flex
-                        shrink-0
-                        items-center
-                        justify-center
-                        w-11
-                        h-11
-                        rounded-full
-                        border
-                        border-primary/20
-                        bg-primary/5
-                        text-primary
-                        transition-all
-                        duration-500
+                        flex h-11 w-11 shrink-0 items-center
+                        justify-center rounded-full border
+                        border-primary/20 bg-primary/5
+                        text-primary transition-all duration-500
                         ${
                           isHovered
-                            ? `
-                              bg-primary
-                              text-on-primary
-                              rotate-[-45deg]
-                              scale-110
-                            `
+                            ? "rotate-[-45deg] scale-110 bg-primary text-on-primary"
                             : ""
                         }
                       `}
@@ -415,26 +327,21 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {/* Description */}
+                  {/* DESCRIPTION */}
 
                   <p
                     className="
-                      mt-5
-                      text-sm
-                      md:text-base
-                      leading-relaxed
-                      text-on-surface-variant
+                      mt-5 text-sm leading-relaxed
+                      text-on-surface-variant md:text-base
                     "
                   >
                     {project.description}
                   </p>
 
-                  {/* =================================
-                      TECHNOLOGIES
-                  ================================== */}
+                  {/* TECHNOLOGIES */}
 
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {project.technologies.map((technology) => {
+                    {project.technologies?.map((technology) => {
                       const Icon = technology.icon;
 
                       return (
@@ -442,197 +349,127 @@ export default function Projects() {
                           key={technology.name}
                           title={technology.name}
                           className="
-                              group/tech
-                              flex
-                              items-center
-                              gap-2
-                              px-3
-                              py-2
-                              rounded-xl
-                              border
-                              border-outline-variant/30
-                              bg-background/40
-                              text-on-surface-variant
-                              transition-all
-                              duration-300
-                              hover:border-primary/40
-                              hover:bg-primary/10
-                              hover:text-primary
-                              hover:-translate-y-1
-                            "
+                            group/tech flex items-center gap-2
+                            rounded-xl border border-outline-variant/30
+                            bg-background/40 px-3 py-2
+                            text-on-surface-variant
+                            transition-all duration-300
+                            hover:-translate-y-1 hover:border-primary/40
+                            hover:bg-primary/10 hover:text-primary
+                          "
                         >
-                          <Icon
-                            className="
-                                text-base
-                                transition-transform
-                                duration-300
-                                group-hover/tech:scale-125
+                          {Icon && (
+                            <Icon
+                              className="
+                                text-base transition-transform
+                                duration-300 group-hover/tech:scale-125
                               "
-                          />
+                            />
+                          )}
 
-                          <span className="text-xs">{technology.name}</span>
+                          <span className="text-xs">
+                            {technology.name}
+                          </span>
                         </div>
                       );
                     })}
                   </div>
 
-                  {/* =================================
-                      FEATURES
-                  ================================== */}
+                  {/* FEATURES */}
 
-                  <div
-                    className="
-                      mt-7
-                      grid
-                      grid-cols-2
-                      gap-x-4
-                      gap-y-2
-                    "
-                  >
-                    {project.features.slice(0, 4).map((feature) => (
-                      <div
-                        key={feature}
-                        className="
-                            flex
-                            items-center
-                            gap-2
-                            text-xs
-                            text-on-surface-variant
-                          "
-                      >
-                        <span
+                  {project.features?.length > 0 && (
+                    <div className="mt-7 grid grid-cols-2 gap-x-4 gap-y-2">
+                      {project.features.slice(0, 4).map((feature) => (
+                        <div
+                          key={feature}
                           className="
-                              w-1.5
-                              h-1.5
-                              rounded-full
-                              bg-primary
-                              shrink-0
+                            flex items-center gap-2
+                            text-xs text-on-surface-variant
+                          "
+                        >
+                          <span
+                            className="
+                              h-1.5 w-1.5 shrink-0
+                              rounded-full bg-primary
                             "
-                        />
+                          />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* =================================
-                      DIVIDER
-                  ================================== */}
+                  {/* DIVIDER */}
 
                   <div className="my-7 h-px bg-gradient-to-r from-primary/20 via-outline-variant/30 to-transparent" />
 
-                  {/* =================================
-                      FOOTER
-                  ================================== */}
+                  {/* FOOTER */}
 
                   <div
                     className="
-                      flex
-                      flex-col
-                      sm:flex-row
-                      sm:items-center
+                      flex flex-col gap-4
+                      sm:flex-row sm:items-center
                       sm:justify-between
-                      gap-4
                     "
                   >
-                    {/* Status */}
+                    {/* STATUS */}
 
                     <div className="flex items-center gap-2">
-                      <span
-                        className="
-                          relative
-                          flex
-                          w-2.5
-                          h-2.5
-                        "
-                      >
-                        <span
-                          className="
-                            absolute
-                            inline-flex
-                            w-full
-                            h-full
-                            rounded-full
-                            bg-primary
-                            opacity-40
-                            animate-ping
-                          "
-                        />
-
-                        <span
-                          className="
-                            relative
-                            inline-flex
-                            w-2.5
-                            h-2.5
-                            rounded-full
-                            bg-primary
-                          "
-                        />
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-40" />
+                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
                       </span>
 
                       <span className="text-xs text-on-surface-variant">
-                        {project.stats.status}
+                        {project.stats?.status || "Available"}
                       </span>
                     </div>
 
-                    {/* Links */}
+                    {/* PROJECT LINKS */}
 
-                    <div className="flex items-center gap-3">
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="
-                          inline-flex
-                          items-center
-                          justify-center
-                          gap-2
-                          px-4
-                          py-2.5
-                          rounded-xl
-                          border
-                          border-outline-variant/40
-                          text-on-surface-variant
-                          text-sm
-                          transition-all
-                          duration-300
-                          hover:border-primary/40
-                          hover:text-primary
-                          hover:bg-primary/10
-                          hover:-translate-y-1
-                        "
-                      >
-                        <FaGithub />
-                        Code
-                      </a>
+                    <div className="flex flex-wrap items-center gap-3">
+                      {project.links?.github &&
+                        project.links.github !== "#" && (
+                          <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View ${project.title} source code`}
+                            className="
+                              inline-flex items-center justify-center
+                              gap-2 rounded-xl border
+                              border-outline-variant/40 px-4 py-2.5
+                              text-sm text-on-surface-variant
+                              transition-all duration-300
+                              hover:-translate-y-1 hover:border-primary/40
+                              hover:bg-primary/10 hover:text-primary
+                            "
+                          >
+                            <FaGithub />
+                            Code
+                          </a>
+                        )}
 
-                      <a
-                        href={project.links.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="
-                          inline-flex
-                          items-center
-                          justify-center
-                          gap-2
-                          px-4
-                          py-2.5
-                          rounded-xl
-                          bg-primary
-                          text-on-primary
-                          text-sm
-                          font-semibold
-                          transition-all
-                          duration-300
-                          hover:scale-105
-                          hover:shadow-lg
-                          hover:shadow-primary/30
-                        "
-                      >
-                        <FaExternalLinkAlt />
-                        Live Demo
-                      </a>
+                      {project.links?.live &&
+                        project.links.live !== "#" && (
+                          <a
+                            href={project.links.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open ${project.title} live demo`}
+                            className="
+                              inline-flex items-center justify-center
+                              gap-2 rounded-xl bg-primary
+                              px-4 py-2.5 text-sm font-semibold
+                              text-on-primary transition-all duration-300
+                              hover:scale-105 hover:shadow-lg
+                              hover:shadow-primary/30
+                            "
+                          >
+                            <FaExternalLinkAlt />
+                            Live Demo
+                          </a>
+                        )}
                     </div>
                   </div>
                 </div>
@@ -641,9 +478,15 @@ export default function Projects() {
           })}
         </div>
 
-        {/* =========================================
-            BOTTOM CTA
-        ========================================== */}
+        {/* EMPTY FILTER RESULT */}
+
+        {filteredProjects.length === 0 && (
+          <p className="py-12 text-center text-on-surface-variant">
+            No projects found in this category.
+          </p>
+        )}
+
+        {/* BOTTOM CTA */}
 
         <div className="mt-20 text-center">
           <p className="text-on-surface-variant">
@@ -653,40 +496,21 @@ export default function Projects() {
           <a
             href="#contact"
             className="
-              inline-flex
-              items-center
-              gap-3
-              mt-5
-              px-7
-              py-3.5
-              rounded-full
-              border
-              border-primary/40
-              text-primary
-              font-medium
-              transition-all
-              duration-300
-              hover:bg-primary
-              hover:text-on-primary
-              hover:scale-105
-              hover:shadow-xl
+              group mt-5 inline-flex items-center gap-3
+              rounded-full border border-primary/40
+              px-7 py-3.5 font-medium text-primary
+              transition-all duration-300
+              hover:scale-105 hover:bg-primary
+              hover:text-on-primary hover:shadow-xl
               hover:shadow-primary/20
             "
           >
             Let's Build Something Great
-            <FaArrowRight
-              className="
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-              "
-            />
+
+            <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>
       </Container>
     </section>
   );
 }
-
-
-

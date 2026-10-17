@@ -3,6 +3,7 @@ import {
   FaReact,
   FaNodeJs,
   FaCode,
+  FaCss3Alt 
 } from "react-icons/fa";
 
 import {
@@ -12,6 +13,11 @@ import {
   SiFlutter,
   SiMysql,
   SiJavascript,
+  SiVite,
+  SiFramer,
+  SiThreedotjs
+  
+
 } from "react-icons/si";
 
 export const PROJECT_CATEGORIES = ["All", "Web", "Mobile", "Full Stack"];
@@ -221,50 +227,68 @@ export const PROJECTS_DATA = [
     },
   },
 
-   {
-    id: 5,
-    title: "3D Design Porfolio",
-    shortTitle: "Web Application",
-    category: "Web",
-    featured: false,
+  
+{
+  id: 5,
+  title: "3D Design Portfolio",
+  shortTitle: "3D Web Portfolio",
+  category: "Web",
+  featured: false,
 
-    description:
-      "A modern Flutter mobile application focused on clean UI, responsive layouts, reusable widgets, application state, and API integration.",
+  description:
+    "An interactive 3D web portfolio built with React, Three.js, and React Three Fiber, featuring immersive 3D visuals, smooth animations, responsive layouts, and a modern user experience.",
 
-    vedio: "/portPolio3D_Vedio.mp4",
+  video: "/portPolio3D_Vedio.mp4",
 
-    technologies: [
-      {
-        name: "Flutter",
-        icon: SiFlutter,
-      },
-      {
-        name: "Dart",
-        icon: FaCode,
-      },
-      {
-        name: "API",
-        icon: FaExternalLinkAlt,
-      },
-    ],
-
-    features: [
-      "Responsive UI",
-      "Reusable widgets",
-      "API integration",
-      "Navigation",
-      "State management",
-      "Modern UX",
-    ],
-
-    stats: {
-      type: "Mobile",
-      status: "Development",
+  technologies: [
+    {
+      name: "React",
+      icon: FaReact,
     },
-
-    links: {
-      github: "#",
-      live: "#",
+    {
+      name: "JavaScript (JSX)",
+      icon: SiJavascript,
     },
+    {
+      name: "CSS",
+      icon: FaCss3Alt,
+    },
+    {
+      name: "Three.js / React Three Fiber",
+      icon: SiThreedotjs,
+    },
+    {
+      name: "Tailwind CSS",
+      icon: SiTailwindcss,
+    },
+    {
+      name: "Framer Motion",
+      icon: SiFramer,
+    },
+    {
+      name: "Vite",
+      icon: SiVite,
+    },
+  ],
+
+  features: [
+    "Interactive 3D visuals",
+    "Responsive web design",
+    "Smooth animations",
+    "React component architecture",
+    "Modern UI/UX",
+    "Optimized 3D rendering",
+  ],
+
+  stats: {
+    type: "Web Application",
+    status: "Completed",
   },
+
+  links: {
+    github: "https://github.com/codewithkashif17/3D-design-portfolio",
+    live: "https://3-d-design-portfolio.vercel.app/",
+  },
+},
+
 ];
