@@ -7,14 +7,15 @@ export const NAV_LINKS = [
     name: "About",
     href: "#about",
   },
+   {
+    name: "Projects",
+    href: "#projects",
+  },
   {
     name: "Skills",
     href: "#skills",
   },
-  {
-    name: "Projects",
-    href: "#projects",
-  },
+ 
   {
     name: "Contact",
     href: "#contact",
@@ -30,7 +31,7 @@ export const SOCIAL_LINKS = {
   email: "mailto:kashifmehmoodtech17@gmail.com",
 };
 
-export const RESUME_LINK = "#";
+export const RESUME_LINK = "./my_cv.pdf";
 
 export const PROJECT_LINKS = {
   portfolio: "https://my-portfolio-gv7k.vercel.app/",
